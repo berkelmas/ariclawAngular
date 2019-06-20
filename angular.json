@@ -24,8 +24,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "css/bootstrap.min.css",
+              "css/flaticon.css",
+              "css/style.css",
+              "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "sass"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -84,7 +92,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "css/bootstrap.min.css",
+              "css/animate.css",
+              "css/owl.carousel.min.css",
+              "css/themify-icons.css",
+              "css/flaticon.css",
+              "css/magnific-popup.css",
+              "css/slick.css",
+              "css/gijgo.min.css",
+              "css/nice-select.css",
+              "css/all.css",
+              "css/style.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -115,6 +134,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "ariclawAngular"
+    }
+  },
+  "defaultProject": "ariclawAngular",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
