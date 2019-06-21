@@ -1,0 +1,44 @@
+<!--::review_part start::-->
+<section class="review_part section_padding section_bg">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-9">
+                <!-- MAIN SLIDES -->
+
+                <div class="slider">
+
+                    <div
+                      *ngFor="let item of texts; let idx=index"
+                      (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)"
+                      [class.visible]="item.visibility" [class.invisible]="!item.visibility"
+                      >
+                        <div class="client_review_text text-center">
+                            <p>{{item.content}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 d-flex justify-content-center mt-5">
+                    <!-- THUMBNAILS -->
+                    <div
+                      class="slider-nav-thumbnails"
+                      [class.visible]="item.visibility" [class.invisible]="!item.visibility"
+                      *ngFor="let item of texts; let idx=index"
+                      (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)"
+                      >
+                        <div
+                          class="slick-center client_review_text text-center">
+                            <img src="/assets/img/client/client_1.png" alt="slideimg" class="image">
+                            <div class="text-center">
+                                <h3>{{item.author}}</h3>
+                                <h5>{{item.role}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
