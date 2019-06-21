@@ -160,6 +160,9 @@
    .single_single_service{
       text-align: center;
       margin-bottom: 95px;
+      padding-top: 5px;
+      transition: all .2s;
+
       @media #{$small_mobile}{
          margin-bottom: 40px;
       }
@@ -175,6 +178,8 @@
       h4{
          font-size: 22px;
          margin: 35px 0px 25px;
+         transition: all .3s;
+
          @media #{$small_mobile}{
             margin: 15px 0px 10px;
          }
@@ -187,6 +192,16 @@
          @media #{$medium_device}{
 
          }
+      }
+
+      &:hover {
+
+        h4 {
+          color: $btn_bg;
+        }
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(black, .1);
+        border-radius: 10px;
       }
    }
 }

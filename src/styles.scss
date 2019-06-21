@@ -1,1 +1,256 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import 'variables';
+@import 'mixins';
+
+/* Main Button Area css
+============================================================================================ */
+.submit_btn{
+	width: auto;
+	display: inline-block;
+	background: $white_color;
+	padding: 0px 50px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 50px;
+	border-radius: 5px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid $border_color;
+	cursor: pointer;
+	@include transform_time(0.5s);
+	&:hover{
+		background: $btn_bg;
+
+
+	}
+}
+.btn_1{
+	display: inline-block;
+	padding: 13.5px 45px;
+	border-radius: 50px;
+	font-size: 14px;
+	color: $white_color;
+
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+	text-transform: capitalize;
+	background-size: 200% auto;
+	border: 1px solid transparent;
+
+  background-image: linear-gradient(to left, #ab7636 0%, #d7af7e 49%, #ab7636 100%);
+
+	&:hover{
+		color: $white_color !important;
+		background-position: right center;
+	}
+	@media #{$small_mobile}{
+		padding: 10px 30px;
+		margin-top: 25px;
+	}
+	@media #{$large_mobile}{
+		padding: 10px 30px;
+		margin-top: 30px;
+	}
+	@media #{$tab_device}{
+		padding: 10px 30px;
+		margin-top: 30px;
+	}
+	@media #{$medium_device}{
+
+	}
+
+}
+.btn_2{
+	display: inline-block;
+	padding: 12.5px 45px;
+	font-size: 14px;
+	font-weight: 500;
+	@include transform_time(.5s);
+	text-transform: capitalize;
+	color: $white_color;
+	border: 2px solid $white_color;
+	font-family: $font_stack_2;
+	&:hover{
+		background-color: $white_color;
+		color: $black_color;
+	}
+	@media #{$small_mobile}{
+		padding: 9.5px 28px;
+		margin-top: 25px;
+	}
+	@media #{$large_mobile}{
+		padding: 9.5px 28px;
+	}
+	@media #{$tab_device}{
+		padding: 9.5px 28px;
+	}
+	@media #{$medium_device}{
+
+	}
+}
+.BG {
+
+	position: absolute;
+	left: 881px;
+	top: 2664px;
+	width: 140px;
+	height: 44px;
+	z-index: 428;
+  }
+
+.btn_3{
+	display: inline-block;
+	padding: 12px 35px;
+	font-size: 14px;
+	font-weight: 400;
+	@include transform_time(.5s);
+	text-transform: capitalize;
+	color: $white_color;
+	background-color: rgb(48, 56, 59);
+	&:hover{
+		background-color: rgb(248, 28, 28);
+		box-shadow: 0px 15px 20px 0px rgba(248, 28, 28, 0.1);
+		color: $white_color;
+	}
+	@media #{$small_mobile}{
+		padding: 9.5px 28px;
+		margin-top: 25px;
+	}
+	@media #{$large_mobile}{
+		padding: 9.5px 28px;
+	}
+	@media #{$tab_device}{
+		padding: 9.5px 28px;
+	}
+	@media #{$medium_device}{
+
+	}
+}
+.single_page_btn{
+	display: inline-block;
+	padding: 9.5px 28px;
+	border-radius: 50px;
+	background-color: #ff6426;
+	font-size: 14px;
+	font-weight: 400;
+	color: $white_color;
+	@include transform_time(.5s);
+	text-transform: capitalize;
+	border: 2px solid transparent;
+	&:hover{
+		color: $common_color;
+		background-color: $white_color;
+		border: 2px solid $common_color;
+	}
+	@media #{$small_mobile}{
+		padding: 9.5px 28px;
+	}
+	@media #{$large_mobile}{
+		padding: 9.5px 28px;
+	}
+	@media #{$tab_device}{
+		padding: 9.5px 28px;
+	}
+	@media #{$medium_device}{
+
+	}
+
+}
+.btn_4{
+	display: inline-block;
+	font-size: 14px;
+	color: $white_color;
+	text-transform: capitalize;
+	@include transform_time(.5s);
+	padding: 14.5px 43px;
+	background-color: $btn_bg;
+	border: 2px solid $btn_bg;
+	&:hover{
+		color: $btn_bg !important;
+		background-color: transparent;
+	}
+
+	@media #{$small_mobile}{
+
+	}
+	@media #{$large_mobile}{
+
+	}
+	@media #{$tab_device}{
+
+	}
+	@media #{$medium_device}{
+
+	}
+}
+
+/* End Main Button Area css
+============================================================================================ */
+
+
+
+.breadcrumb_bg {
+	@include background("../img/breadcrumb.png");
+}
+
+.breadcrumb {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	padding: 0;
+	box-shadow: 0 0 10px rgba(black, .2);
+
+	.breadcrumb_iner {
+		height: 450px;
+		width: 100%;
+		display: table;
+
+		.breadcrumb_iner_item {
+			display: table-cell;
+			vertical-align: middle;
+
+			h2 {
+				color: $black_color;
+				font-size: 45px;
+				font-weight: 600;
+				margin-bottom: 10px;
+				text-transform: capitalize;
+
+				@media #{$small_mobile} {
+					font-size: 35px;
+				}
+
+				@media #{$large_mobile} {
+					font-size: 35px;
+				}
+
+				@media #{$tab_device} {
+					font-size: 40px;
+				}
+
+				@media #{$medium_device} {}
+			}
+
+			p {
+				font-size: 15px;
+				color: $black_color;
+				text-transform: capitalize;
+			}
+
+			span {
+				margin: 0px 5px;
+				font-size: 12px;
+			}
+
+		}
+	}
+
+}
+
+.breadcrumb {
+	margin-bottom: 0px !important;
+}

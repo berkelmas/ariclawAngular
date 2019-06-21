@@ -12,6 +12,11 @@ import { HeaderComponent } from './header/header.component';
 import { ReviewComponent } from './review/review.component';
 
 import "hammerjs";
+import { PracticeAreasComponent } from './practice-areas/practice-areas.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -25,7 +30,12 @@ export class MyHammerConfig extends HammerGestureConfig  {
     ServicesComponent,
     BannerComponent,
     HeaderComponent,
-    ReviewComponent
+    ReviewComponent,
+    PracticeAreasComponent,
+    MainPageComponent,
+    ErrorPageComponent,
+    FooterComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
