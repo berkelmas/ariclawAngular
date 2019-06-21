@@ -4,8 +4,7 @@ import {
   state,
   style,
   animate,
-  transition,
-  keyframes
+  transition
 } from '@angular/animations';
 
 
@@ -20,7 +19,7 @@ import {
         opacity : 1
       })),
       state('closed', style({
-        opacity : 1,
+        opacity : 0,
         transform: 'translateX(-900px)'
       })),
       transition('closed => opened', animate('0.5s')),

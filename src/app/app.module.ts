@@ -17,6 +17,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { ChronologyComponent } from './chronology/chronology.component';
+import { ChronologyDirective } from './chronology/chronology.directive';
 
 export class MyHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
@@ -35,7 +37,9 @@ export class MyHammerConfig extends HammerGestureConfig  {
     MainPageComponent,
     ErrorPageComponent,
     FooterComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    ChronologyComponent,
+    ChronologyDirective
   ],
   imports: [
     BrowserModule,
