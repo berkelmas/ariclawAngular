@@ -228,3 +228,77 @@
 .invisible {
   display: none;
 }
+
+
+
+.review_arrows {
+  color: gray;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  @media #{$small_mobile}{
+    display: none;
+  }
+
+  &_container {
+    position : relative;
+  }
+
+  &_next {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 6px double gray;
+    cursor: pointer;
+
+    position: relative;
+
+
+    transition: all .5s;
+
+
+    &::before {
+      content: ">";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: gray;
+      font-size: 40px;
+      transform: translate(50%, -20%);
+    }
+
+    &:hover {
+      background-color: darken(#f3f1ef, 10%);
+    }
+  }
+
+  &_prev {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 6px double gray;
+    position: relative;
+    cursor: pointer;
+    transition: all .5s;
+
+    &::before {
+      content: "<";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: gray;
+      font-size: 40px;
+      transform: translate(50%, -20%);
+    }
+
+    &:hover {
+      background-color: darken(#f3f1ef, 10%);
+    }
+  }
+}

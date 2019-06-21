@@ -1,6 +1,22 @@
 <!--::review_part start::-->
 <section class="review_part section_padding section_bg">
-    <div class="container">
+
+
+    <div class="container review_arrows_container">
+      <div
+        class="review_arrows"
+        *ngFor="let item of texts; let idx=index"
+        [class.visible]="item.visibility" [class.invisible]="!item.visibility"
+        >
+        <span
+          class="review_arrows_prev"
+          (click)="swipe(idx, 'swipeleft')"
+          ></span>
+        <span
+          class="review_arrows_next"
+          (click)="swipe(idx, 'swiperight')"
+          ></span>
+      </div>
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-9">
                 <!-- MAIN SLIDES -->
